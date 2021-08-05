@@ -3,14 +3,126 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "uni-app",
+				"app-plus": {
+					// "navigationBarBackgroundColor":"#000000",
+					// "navigationBarTextStyle":"white",  //状态栏字体颜色
+					"pullToRefresh": {
+						"support": true,
+						"color": "#999999",
+						"style": "default",
+						"contentdown": {
+							"caption": "下拉可刷新"
+						},
+						"contentover": {
+							"caption": "释放可刷新"
+						},
+						"contentrefresh": {
+							"caption": "正在刷新"
+						}
+					},
+					"titleNView":{
+						"buttons":[{//右侧操作按钮样式定义,是以数组形式定义，可定义多个
+							"color":"#999999",
+							"fontSize":"24rpx",
+							"text":"编辑"
+						}]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/about/index",
+			"style": {
+				"navigationBarTitleText": "关于我们"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/mine/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "首页",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "发现",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "project/search/pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"color":"#676a78",
+		"selectedColor":"#0078ff",
+		"borderStyle":"black",
+		"backgroundColor":"#ffffff",
+		"list": [
+			{
+				"pagePath" : "pages/home/home",
+				"text":"首页",
+				"iconPath":"static/images/tab-ticket-outline.png",
+				"selectedIconPath":"static/images/tab-ticket.png"
+			},
+			{
+				"pagePath":"pages/search/search",
+				"text":"发现",
+				"iconPath":"static/images/tab-shop-outline.png",
+				"selectedIconPath":"static/images/tab-shop.png"
+			},
+			{
+				"pagePath":"pages/mine/mine",
+				"text":"我的",
+				"iconPath":"static/images/tab-person-outline.png",
+				"selectedIconPath":"static/images/tab-person.png"
+			}
+		]	
+	 },
+	 "subPackages":[
+		{
+			"root":"project/mine",
+			"pages":[
+				{
+					"path":"pages/setting/setting"
+				}
+			]
+		},
+		{
+			"root":"project/search",
+			"pages":[
+				{
+					"path":"pages/detail/detail"
+				}
+			]
+		}
+	 ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"pageOrientation": "portrait"
 	}
 }
