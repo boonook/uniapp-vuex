@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
 		<button type="default" @click="goto('/pages/about/index')">通过方法跳转到about页面</button>
+		<button type="default" @click="onChangeStore">测试store{{baseUrl}}</button>
 		<button type="default" @click="onLogin">登录{{baseUrl}}</button>
 		<image class="logo" src="/static/logo.png"></image>
 		<skeleton
@@ -75,9 +76,13 @@
 			}
 		},
 		onLoad() {
-			http().then(res=>{
-				
-			})
+			console.log(this.$store.state.isLogin);
+			let data={
+				name:1,
+				id:'1',
+				email:'17798235471'
+			}
+			this.$store.dispatch('handleSetUserInfo',data);
 		},
 		methods: {
 			goto(url) {
@@ -85,6 +90,12 @@
                     url:url
                 })
             },
+			onChangeStore(){
+				console.log(this.$store.state.userInfo);
+				 // uni.switchTab({
+				 // 	url:'/pages/home/home'
+				 // })
+			},
 			onLogin(){
 				 uni.switchTab({
 				 	url:'/pages/home/home'
@@ -109,7 +120,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	.content {
 		background-color: #2C405A;
 	}

@@ -27,6 +27,14 @@
 							"fontSize":"24rpx",
 							"text":"编辑"
 						}]
+					},
+					"app-plus": {
+						"safearea": {
+							"bottom": {    
+								"offset": "auto"    
+							}  
+						},  
+						"backgroundColor":"#ffffff"  
 					}
 				}
 			}
@@ -39,21 +47,16 @@
 		}
 	    ,{
             "path" : "pages/mine/mine",
-            "style" :                                                                                    
-            {
+            "style":{
                 "navigationBarTitleText": "我的",
                 "enablePullDownRefresh": false
             }
-            
-        }
-        ,{
+        },{
             "path" : "pages/home/home",
-            "style" :                                                                                    
-            {
+            "style" :{
                 "navigationBarTitleText": "首页",
                 "enablePullDownRefresh": false
             }
-            
         }
         ,{
             "path" : "pages/search/search",
@@ -105,7 +108,18 @@
 			"root":"project/mine",
 			"pages":[
 				{
-					"path":"pages/setting/setting"
+					"path":"pages/setting/setting",
+					"style":{
+						 "navigationBarTitleText": "设置",
+						 "app-plus": {
+						 	"safearea": {
+						 		"bottom": {    
+						 			"offset": "auto"    
+						 		}  
+						 	},  
+						 	"backgroundColor":"#ffffff"  
+						 }
+					}
 				}
 			]
 		},
@@ -124,5 +138,15 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"pageOrientation": "portrait"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
 	}
 }

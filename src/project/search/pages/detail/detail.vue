@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<text>详情</text>
 	</view>
 </template>
 
@@ -17,6 +17,6 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
