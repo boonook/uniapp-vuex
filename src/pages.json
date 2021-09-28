@@ -67,15 +67,6 @@
             }
             
         }
-        ,{
-            "path" : "project/search/pages/detail/detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "详情",
-                "enablePullDownRefresh": false
-            }
-            
-        }
     ],
 	"tabBar": {
 		"color":"#676a78",
@@ -118,6 +109,39 @@
 						 		}  
 						 	},  
 						 	"backgroundColor":"#ffffff"  
+						 }
+					}
+				},
+				{
+					"path":"pages/web-view/index",
+					"style":{
+						 "navigationBarTitleText": "web-view",
+						 "app-plus": {
+							 "app-plus": {
+							 	"safearea": {
+							 		"bottom": {    
+							 			"offset": "auto"    
+							 		}  
+							 	},  
+							 	"backgroundColor":"#ffffff"  
+							 },
+							 "titleNView":{
+							 	"buttons":[{//右侧操作按钮样式定义,是以数组形式定义，可定义多个
+							 		"color":"#999999",
+							 		"fontSize":"24rpx",
+							 		"text":""
+							 	}]
+							 }
+						 }
+					}
+				},
+				{
+					"path":"pages/nav-bar/index",
+					"style":{
+						 "navigationStyle":"custom",
+						 "app-plus":{
+							"titleView":false,
+							"backgroundColor":"orange"  
 						 }
 					}
 				}
