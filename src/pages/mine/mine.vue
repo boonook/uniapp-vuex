@@ -12,6 +12,10 @@
 		   <image mode="widthFix" class="logo" src="/static/setting.png"></image>
 		   <text class="list-item-text">自定义导航栏</text>
 		</view>
+		<view class="list-item" @click="goNavBarPageTest">
+		   <image mode="widthFix" class="logo" src="/static/setting.png"></image>
+		   <text class="list-item-text">自定义导航栏测试</text>
+		</view>
 	</view>
 </template>
 
@@ -39,6 +43,11 @@
 			goNavBarPage(){
 				uni.navigateTo({
 				    url:'/project/mine/pages/nav-bar/index'
+				})
+			},
+			goNavBarPageTest(){
+				uni.navigateTo({
+				    url:'/project/mine/pages/nav-bar-test/index'
 				})
 			}
 		},

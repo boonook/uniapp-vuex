@@ -144,6 +144,16 @@
 							"backgroundColor":"orange"  
 						 }
 					}
+				},
+				{
+					"path":"pages/nav-bar-test/index",
+					"style":{
+						 "navigationStyle":"custom",
+						 "app-plus":{
+							"titleView":false,
+							"backgroundColor":"orange"  
+						 }
+					}
 				}
 			]
 		},

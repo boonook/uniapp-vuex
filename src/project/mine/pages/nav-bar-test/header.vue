@@ -1,25 +1,12 @@
 <template>
-	<view class="nav-bar">
-		<view>
-			<view class="status_bar"><view class="top_view"></view></view>
-			<view class="top_nav_segmented">
-			    <view class="left-nav-icon" @tap="onBack"><text>返回</text></view>
-			    <view class="nav_segmented">
-			        <text>自定义导航栏</text>
-			    </view>
-			    <view class="right-plus"><text>添加</text></view>
+	<view class="nav-bar-header">
+		<view class="status_bar"><view class="top_view"></view></view>
+		<view class="top_nav_segmented">
+			<view class="left-nav-icon" @tap="onBack"><text>返回</text></view>
+			<view class="nav_segmented">
+				<text>自定义导航栏</text>
 			</view>
-		</view>
-		<view class="body">
-			<view>
-				<text>123123213</text>
-			</view>
-			<view>
-				<text>123123213</text>
-			</view>
-			<view>
-				<text>123123213</text>
-			</view>
+			<view class="right-plus"><text>添加</text></view>
 		</view>
 	</view>
 </template>
@@ -42,13 +29,6 @@
 </script>
 
 <style lang="scss" scoped>
-	page{background-color:transparent;} 
-	.status_bar {
-	    height: var(--status-bar-height);
-	    width: 100%;
-	    background-color: #fff;
-	}
-	
 	.top_nav_segmented {
 	    background-color: #f8f8f8;
 	    padding-top: 10px;
@@ -95,8 +75,5 @@
 	    text-align: center;
 	    color: #444;
 		margin-left:15px;
-	}
-	.body{
-		margin-top:52px;
 	}
 </style>
