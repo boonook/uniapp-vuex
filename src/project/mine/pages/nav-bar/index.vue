@@ -5,7 +5,7 @@
 			<view class="top_nav_segmented">
 			    <view class="left-nav-icon" @tap="onBack"><text>返回</text></view>
 			    <view class="nav_segmented">
-			        <text>自定义导航栏</text>
+			        <text>自定义导航栏自定义导航栏</text>
 			    </view>
 			    <view class="right-plus"><text>添加</text></view>
 			</view>
@@ -63,10 +63,13 @@
 	}
 	
 	.nav_segmented {
-	    flex: 1;
+	    width:100px;
 		font-size:16px;
 		text-align:center;
 		color: #444;
+		overflow: hidden;/*超出部分隐藏*/
+		white-space: nowrap;/*不换行*/
+		text-overflow:ellipsis;/*超出部分文字以...显示*/
 	}
 	
 	.top_view {
@@ -80,21 +83,29 @@
 	
 	.right-plus {
 	    margin-left: auto;
-	    width: 40px;
 	    font-size:14px;
 	    color: white;
 	    text-align: center;
 	    margin-right: 15px;
 		color: #444;
+		flex:1;
+		display: flex;
+		flex-direction: row;
+		align-items:center;
+		justify-content: flex-end;
 	}
 	
 	.left-nav-icon {
 	    margin-left: auto;
-	    width: 40px;
+	    flex:1;
 	    font-size: 14px;
 	    text-align: center;
 	    color: #444;
 		margin-left:15px;
+		display: flex;
+		flex-direction: row;
+		align-items:center;
+		justify-content: flex-start;
 	}
 	.body{
 		margin-top:52px;
